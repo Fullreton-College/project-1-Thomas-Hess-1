@@ -25,11 +25,10 @@ int main() {
 
     getWords(allWords, file);
     sortWords(allWords);
+    vector<pair<string, int>> finalWordFrequency = getWordCounts(allWords);
 
     cout << "Here is the frequency of every word in the "
          << fName << " text file:\n";
-    
-    vector<pair<string, int>> finalWordFrequency = getWordCounts(allWords);
 
     for (int i = 0; i < finalWordFrequency.size(); i++) {
         cout << "   " << finalWordFrequency[i].first << ": " 
